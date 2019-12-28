@@ -334,3 +334,14 @@ a {
       display: flex;
       justify-content: space-between;
   }
+
+  .like-btn,
+  .like-btn:focus,
+  .like-btn:active {
+    border: none;
+    outline: none;
+    background-color: rgba(0,0,0, 0);
+    display: flex;
+    justify-content: space-between;
+    width: 40px;
+  }

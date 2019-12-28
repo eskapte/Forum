@@ -62,9 +62,12 @@ class Comment(models.Model):
     content = models.TextField(max_length=500)
     add_time = models.DateTimeField(verbose_name='Добавлен', auto_now_add=True, editable=False)
     comment_author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Автор комментария', default=None)
-    likes = models.IntegerField(verbose_name='Лайки', default=0)
+    likes = models.ManyToManyField(User, related_name='Лайки')
 
     class Meta:
         verbose_name_plural = 'Комментарии'
         verbose_name = 'Комментарий'
         ordering = ['-add_time']
+    
+    def __str__(self):
+        return self.content

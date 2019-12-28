@@ -56,7 +56,7 @@
                         <b>{{ comment.comment_author }}</b>
                     </a>
                     <p>{{ comment.content|linebreaks }}</p>
-                    <b><button value="{{ comment.likes }}" class='like-btn'>{{ comment.likes }}</button></b>
+                    <b><button value="{{ comment.likes.count }}" class='like-btn'><img src=" {% static 'images/like.png' %}" width="10"><span>{{ comment.likes.count }}</span></button></b>
                     <p><em>{{ comment.add_time }}</em></p>
                 </div>
             {% endfor %}
