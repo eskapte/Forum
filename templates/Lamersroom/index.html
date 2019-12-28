@@ -1,0 +1,104 @@
+{% extends 'Lamersroom/basic.html' %}
+{% load static %}
+{% block title %}
+    Lamer$room - Главная
+{% endblock %}
+{% block content %}
+    <div class="menu-and-search">
+        <nav>
+            <select name="new">
+                <option>Новые</option>
+                <option>Старые</option>
+            </select>
+            <select name="open">
+                <option disabled selected hidden>Статус</option>
+                <option>Открытые</option>
+                <option>Закрытые</option>
+            </select>
+            <select name="Programming-area">
+                <option disabled selected hidden>Область</option>
+                {% for rubric in rubrics %}
+                    <option>{{ rubric.name }}</option>
+                {% endfor %}
+            </select>
+        </nav>
+        {% if user.is_authenticated %}
+            <a href="{% url 'add_new_post' %}" class="add-new-post">
+                Добавить новый пост
+            <img src="{% static 'images/add_icon.png' %}" width="20">
+        </a>
+        {% endif %}
+        <div class="search">
+            <input type="search" placeholder="Поиск ...">
+        </div>
+    </div>
+    <div class="posts">
+        {% for post in posts %}
+            <div class="post">
+                <h1><a href="{% url 'detail' pk=post.id %}">{{ post.title|truncatewords:'10' }}</a></h1>
+                <p>{{ post.text|truncatewords:"30" }}</p>
+                {% if post.status == 'o' %}
+                    <p><em>Открыт {{ post.published|date:"d.m.Y" }} в {{ post.published|date:"H:i:s" }}</em></p>
+                {% else %}
+                    <del>
+                        <p><em>Открыт {{ post.published|date:"d.m.Y" }} в {{ post.published|date:"H:i:s" }}</em></p>
+                    </del>
+                    <p><b>Закрыт {{ post.close_time|date:'d.m.Y' }} в {{ post.close_time|date:'H:i:s' }}</b></p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    {% if page.has_other_pages %}
+        <div class="pages">
+
+        {% if page.paginator.num_pages > 5 %}
+
+             {% if page.number >= 3 and page.number|add:1 == page.paginator.num_pages %}
+                <a href="?page={{ page.number|add:-3 }}">{{ page.number|add:-3 }}</a>
+                <a href="?page={{ page.number|add:-2 }}">{{ page.number|add:-2 }}</a>
+                <a href="?page={{ page.number|add:-1 }}">{{ page.number|add:-1 }}</a>
+                <a href="?page={{ page.number }}" class="current-page">{{ page.number }}</a>
+                <a href="?page={{ page.number|add:1 }}">{{ page.number|add:1 }}</a>
+            {% elif page.number >= 3 and not page.has_next %}
+                <a href="?page={{ page.number|add:-4 }}">{{ page.number|add:-4 }}</a>
+                <a href="?page={{ page.number|add:-3 }}">{{ page.number|add:-3 }}</a>
+                <a href="?page={{ page.number|add:-2 }}">{{ page.number|add:-2 }}</a>
+                <a href="?page={{ page.number|add:-1 }}">{{ page.number|add:-1 }}</a>
+                <a href="?page={{ page.number }}" class="current-page">{{ page.number }}</a>
+            {% elif page.number >= 3 %}
+                <a href="?page={{ page.number|add:-2 }}">{{ page.number|add:-2 }}</a>
+                <a href="?page={{ page.number|add:-1 }}">{{ page.number|add:-1 }}</a>
+                <a href="?page={{ page.number }}" class="current-page">{{ page.number }}</a>
+                <a href="?page={{ page.number|add:1 }}">{{ page.number|add:1 }}</a>
+                <a href="?page={{ page.number|add:2 }}">{{ page.number|add:2 }}</a>
+            {% else %}
+                {% if page.has_previous %}
+                    <a href="?page={{ page.number|add:-1 }}">{{ page.number|add:-1 }}</a>
+                    <a href="?page={{ page.number }}" class="current-page">{{ page.number }}</a>
+                    <a href="?page={{ page.number|add:1 }}">{{ page.number|add:1 }}</a>
+                    <a href="?page={{ page.number|add:2 }}">{{ page.number|add:2 }}</a>
+                    <a href="?page={{ page.number|add:3 }}">{{ page.number|add:3 }}</a>
+                {% else %}
+                    <a href="?page={{ page.number }}" class="current-page">{{ page.number }}</a>
+                    <a href="?page={{ page.number|add:1 }}">{{ page.number|add:1 }}</a>
+                    <a href="?page={{ page.number|add:2 }}">{{ page.number|add:2 }}</a>
+                    <a href="?page={{ page.number|add:3 }}">{{ page.number|add:3 }}</a>
+                    <a href="?page={{ page.number|add:4 }}">{{ page.number|add:4 }}</a>
+                {% endif %}
+            {% endif %}
+
+        {% else %}
+            {% for num in page.paginator.page_range %}
+                {% if page.number == num %}
+                    <a href="?page={{ num }}" class="current-page">{{ num }}</a>
+                {% else %}
+                    <a href="?page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+
+        {% endif %}
+
+
+        </div>
+    {% endif %}
+{% endblock %}

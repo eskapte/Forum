@@ -1,0 +1,29 @@
+{% extends 'Lamersroom/basic.html' %}
+{% load static %}
+{% block title %}
+    Авторизация
+{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+		<h1>Вы уже вошли в свой аккаунт</h1>
+		<a href="{% url 'logout'%}"><button>Выйти</button></a>
+	{% else %}
+	<form method="post" id='form' class="auth-form">
+		{% csrf_token %}
+        <h1>Вход</h1>
+        <div class="enter">
+            {{ form.username }}
+            <div class="line"></div>
+            {{ form.password }}
+        </div>
+		<input type="submit" value='Войти'>
+	</form>
+	{% endif %}
+    <script>
+        let username = document.querySelector('#id_username');
+        let password = document.querySelector('#id_password');
+        username.setAttribute('placeholder', 'Имя пользователя');
+        password.setAttribute('placeholder', 'Пароль');
+    </script>
+{% endblock %}

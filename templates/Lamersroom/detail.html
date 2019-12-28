@@ -1,0 +1,67 @@
+{% extends 'Lamersroom/basic.html' %}
+{% load static %}
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+{% block content %}
+    <div class="detail">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaks }}</p>
+        <a href="{% url 'profile' username=post.author %}" class="profile-link">
+            <img src="{{ post.author.profile.user_icon.url }}" width="40" style="border-radius: 50%;">
+            <b>{{ post.author }}</b>
+        </a>
+        {% if post.status == 'o' %}
+                        <p><em>Открыт {{ post.published|date:"d.m.Y" }} в {{ post.published|date:"H:i:s" }}</em></p>
+                    {% else %}
+                        <del>
+                            <p><em>Открыт {{ post.published|date:"d.m.Y" }} в {{ post.published|date:"H:i:s" }}</em></p>
+                        </del>
+                        <p><b>Закрыт {{ post.close_time|date:'d.m.Y' }} в {{ post.close_time|date:'H:i:s' }}</b></p>
+                    {% endif %}
+    </div>
+    {% if user.username == post.author.username or user.username == 'admin' %}
+    <div class="buttons">
+        {% if post.status == 'o' %}
+            <a href="{% url 'update' pk=post.id %}" class="delete-post">Закрыть</a>
+        {% endif %}
+        <a href="{% url 'delete_post' pk=post.id %}" class="delete-post">
+            Удалить
+            <img src="{% static 'images/delete_icon.png' %}" width="20">
+        </a>
+    </div>
+        
+    {% endif %}
+    <hr size="3" color="black">
+    {% if user.is_authenticated %}
+        <div class="add-comment">
+            <h2>Добавить комментарий</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.content }}<br>
+                {{ form.post }}
+                {{ form.comment_author }}
+                <input type="submit" value="Оставить">
+            </form>
+        </div>
+    {% else %}
+        <h2>Авторизуйтесь, чтобы оставить комментарий</h2>
+    {% endif %}
+    <div class="comments">
+        {% if comments %}
+            {% for comment in comments %}
+                <div class="comment">
+                    <a href="{% url 'profile' username=comment.comment_author %}">
+                        <img src="{{ comment.comment_author.profile.user_icon.url }}" alt="" width="40" height="40">
+                        <b>{{ comment.comment_author }}</b>
+                    </a>
+                    <p>{{ comment.content|linebreaks }}</p>
+                    <b><button value="{{ comment.likes }}" class='like-btn'>{{ comment.likes }}</button></b>
+                    <p><em>{{ comment.add_time }}</em></p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h2>Комментариев нет</h2>
+        {% endif %}
+    </div>
+{% endblock %}

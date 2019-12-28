@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b6c3bf9-7601-4006-b0a5-aeafa7e14d9f" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="forum_db@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="forum_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="forum_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="forum_db: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="forum_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="forum_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="forum_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="forum_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="forum_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="forum_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Forum" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Forum/urls.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Lamersroom/models.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Lamersroom/signals/handlers.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Lamersroom/views.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates/Lamersroom/detail.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1PszM6xtpAWJhoxLmVaG7QPjbz4" />
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Сергей\PycharmProjects\Forum\media\Lamersroom\images" />
+      <recent name="C:\Users\Сергей\PycharmProjects\Forum\Lamersroom\static\images" />
+      <recent name="C:\Users\Сергей\PycharmProjects\Forum\media\Lamersroom" />
+      <recent name="C:\Users\Сергей\PycharmProjects\Forum\Forum\static\Lamersroom" />
+      <recent name="C:\Users\Сергей\PycharmProjects\Forum\Forum" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.handlers">
+    <configuration name="basic.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Forum/templates/Lamersroom/basic.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="handlers" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Forum" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lamersroom/signals" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lamersroom/signals/handlers.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Forum" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Forum" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.handlers" />
+        <item itemvalue="JavaScript Debug.basic.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b6c3bf9-7601-4006-b0a5-aeafa7e14d9f" name="Default Changelist" comment="" />
+      <created>1566677541588</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566677541588</updated>
+      <workItem from="1566677577358" duration="286000" />
+      <workItem from="1566678054199" duration="1008000" />
+      <workItem from="1566679109834" duration="20000" />
+      <workItem from="1566679152233" duration="2194000" />
+      <workItem from="1566681371765" duration="60000" />
+      <workItem from="1566681450463" duration="1169000" />
+      <workItem from="1566682646379" duration="218000" />
+      <workItem from="1566682884902" duration="545000" />
+      <workItem from="1566683454411" duration="238000" />
+      <workItem from="1566683711624" duration="83000" />
+      <workItem from="1567448149765" duration="2513000" />
+      <workItem from="1567684815901" duration="858000" />
+      <workItem from="1567686824115" duration="1240000" />
+      <workItem from="1567706700864" duration="537000" />
+      <workItem from="1567707260699" duration="223000" />
+      <workItem from="1567707540115" duration="4980000" />
+      <workItem from="1567761455231" duration="335000" />
+      <workItem from="1567882329224" duration="7020000" />
+      <workItem from="1567895518459" duration="2151000" />
+      <workItem from="1567943676209" duration="274000" />
+      <workItem from="1567943973489" duration="211000" />
+      <workItem from="1567944210784" duration="2110000" />
+      <workItem from="1567947445109" duration="8955000" />
+      <workItem from="1568212166585" duration="310000" />
+      <workItem from="1568216576724" duration="1209000" />
+      <workItem from="1568228359326" duration="7342000" />
+      <workItem from="1568317163206" duration="1522000" />
+      <workItem from="1568319393649" duration="964000" />
+      <workItem from="1568361177525" duration="115000" />
+      <workItem from="1568453685435" duration="764000" />
+      <workItem from="1568454475394" duration="1117000" />
+      <workItem from="1568455629787" duration="3003000" />
+      <workItem from="1568538918441" duration="6371000" />
+      <workItem from="1568545497877" duration="1100000" />
+      <workItem from="1568644841216" duration="16961000" />
+      <workItem from="1568664294228" duration="103000" />
+      <workItem from="1568829819502" duration="9173000" />
+      <workItem from="1568931392147" duration="623000" />
+      <workItem from="1568997915392" duration="7162000" />
+      <workItem from="1569173366005" duration="2161000" />
+      <workItem from="1569608398440" duration="3074000" />
+      <workItem from="1569611518012" duration="8398000" />
+      <workItem from="1569841423152" duration="330000" />
+      <workItem from="1569944224154" duration="5992000" />
+      <workItem from="1569950487089" duration="206000" />
+      <workItem from="1570093838614" duration="55000" />
+      <workItem from="1570178678232" duration="5000" />
+      <workItem from="1570290307461" duration="388000" />
+      <workItem from="1570315228355" duration="79000" />
+      <workItem from="1570315780363" duration="1651000" />
+      <workItem from="1570389830518" duration="2673000" />
+      <workItem from="1570780889358" duration="5000" />
+      <workItem from="1570823279416" duration="892000" />
+      <workItem from="1571079156318" duration="5821000" />
+      <workItem from="1571120560035" duration="40000" />
+      <workItem from="1571130378212" duration="698000" />
+      <workItem from="1571309082541" duration="10000" />
+      <workItem from="1571394547835" duration="2295000" />
+      <workItem from="1571592728713" duration="2371000" />
+      <workItem from="1571760444032" duration="9211000" />
+      <workItem from="1571937199224" duration="4302000" />
+      <workItem from="1571941789324" duration="437000" />
+      <workItem from="1571942423098" duration="714000" />
+      <workItem from="1571943192608" duration="7218000" />
+      <workItem from="1572013991703" duration="73000" />
+      <workItem from="1572028686124" duration="2882000" />
+      <workItem from="1572079585533" duration="6000" />
+      <workItem from="1572458787429" duration="222000" />
+      <workItem from="1572462489267" duration="15000" />
+      <workItem from="1572690292954" duration="1393000" />
+      <workItem from="1572800814735" duration="3386000" />
+      <workItem from="1573242758138" duration="4405000" />
+      <workItem from="1573385163837" duration="198000" />
+      <workItem from="1573541288643" duration="39000" />
+      <workItem from="1573542588014" duration="426000" />
+      <workItem from="1573543175811" duration="2000" />
+      <workItem from="1573543381454" duration="329000" />
+      <workItem from="1573552683782" duration="620000" />
+      <workItem from="1573855951019" duration="569000" />
+      <workItem from="1573856583029" duration="173000" />
+      <workItem from="1574625246333" duration="2015000" />
+      <workItem from="1575074856592" duration="34000" />
+      <workItem from="1575077037680" duration="2000" />
+      <workItem from="1575379018235" duration="5000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Forum$handlers.coverage" NAME="handlers Coverage Results" MODIFIED="1568651267422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lamersroom/signals" />
+  </component>
+</project>

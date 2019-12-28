@@ -1,0 +1,41 @@
+{% extends 'Lamersroom/basic.html' %}
+{% load static %}
+{% block title %}
+    Профиль
+{% endblock %}
+
+{% block content %}
+    {% if c_user.username == user.username %}
+        <h1>Информация о вашем профиле:</h1>
+        <h3>Статус: {{ c_user.profile.user_status }}</h3>
+        {% if c_user.profile.user_icon %}
+            <img src="{{ c_user.profile.user_icon.url }}" alt="Аватарка" width="200">
+        {% else %}
+            <img src="{% static 'images/../../media/Lamersroom/images/default_icon.jpg' %}" alt="Аватарка" width="200">
+        {% endif %}
+        <h3>Никнейм:</h3>
+        <h2>{{ c_user.username }}</h2>
+        <h3>Email:</h3>
+        <h2>{{ c_user.email }}</h2>
+        <h3>Имя:</h3>
+        <h2>{{ c_user.profile.first_name }}</h2>
+        <h3>Фамилия:</h3>
+        <h2>{{ c_user.profile.last_name }}</h2>
+        <h3>Дата регистрации:</h3>
+        <h2>{{ c_user.date_joined }}</h2>
+    {% else %}
+        <h1>Информация о профиле:</h1>
+        <h3>Статус: {{ c_user.profile.user_status }}</h3>
+        <img src="{{ c_user.profile.user_icon.url }}" alt="Аватарка" width="200">
+        <h3>Никнейм:</h3>
+        <h2>{{ c_user.username }}</h2>
+        <h3>Email:</h3>
+        <h2>{{ c_user.email }}</h2>
+        <h3>Имя:</h3>
+        <h2>{{ c_user.profile.first_name }}</h2>
+        <h3>Фамилия:</h3>
+        <h2>{{ c_user.profile.last_name }}</h2>
+        <h3>Дата регистрации:</h3>
+        <h2>{{ c_user.date_joined }}</h2>
+    {% endif %}
+{% endblock %}

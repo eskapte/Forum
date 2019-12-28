@@ -1,0 +1,11 @@
+{% extends 'Lamersroom/basic.html' %}
+{% block title %}
+    Удалить пост
+{% endblock %}
+{% block content %}
+    <h1>Вы уверены?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Удалить" class="delete-post">
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'Lamersroom/basic.html' %}
+
+{% block title %}
+    Закрыть пост?
+{% endblock %}
+
+{% block content %}
+    <h1>Вы уверены?</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Закрыть" class="delete-post">
+    </form>
+{% endblock %}
