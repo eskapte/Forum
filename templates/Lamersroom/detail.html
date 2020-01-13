@@ -56,7 +56,14 @@
                         <b>{{ comment.comment_author }}</b>
                     </a>
                     <p>{{ comment.content|linebreaks }}</p>
-                    <b><button value="{{ comment.likes.count }}" class='like-btn'><img src=" {% static 'images/like.png' %}" width="10"><span>{{ comment.likes.count }}</span></button></b>
+                    
+                    {% if user.pk in comment.likes %}
+                        <b><button value="{{ comment.likes.count }}" class='like-btn liked' name='buttonLike' id="{{ comment.pk }}"><img src=" {% static 'images/like.png' %}" width="10"><span>{{ comment.likes.count }}</span></button></b>
+                    {% else %}
+                    <b><button value="{{ comment.likes.count }}" class='like-btn' name='buttonLike' id="{{ comment.pk }}"><img src=" {% static 'images/like.png' %}" width="10"><span>{{ comment.likes.count }}</span></button></b>
+                    {% endif %}
+                        
+                    
                     <p><em>{{ comment.add_time }}</em></p>
                 </div>
             {% endfor %}

@@ -10,6 +10,9 @@ from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from django.utils import timezone
 from django.http import JsonResponse
+from django.core import serializers
+from django_ajax.mixin import AJAXMixin
+from django.shortcuts import HttpResponse
 
 def index(request):
     posts = Post.objects.all()
@@ -32,6 +35,23 @@ class DetailPost(DetailView, FormView):
     model = Post
     template_name = 'Lamersroom/detail.html'
     form_class = AddComment
+
+    
+    def post(self, request, **args):
+        self.object = self.get_object()
+
+        if self.request.is_ajax():
+            like_id = self.request.POST.get("id")
+            liked_comment = Comment.objects.get(pk=like_id)
+            current_user = self.request.user
+            if current_user in liked_comment.likes.all():
+                liked_comment.likes.remove(current_user.pk)
+                return HttpResponse('like-removed')
+            else:
+                liked_comment.likes.add(current_user.pk)
+                return HttpResponse('like-added')
+
+        return super().post(request, **args)
 
 
     def get_context_data(self, **kwargs):

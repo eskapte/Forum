@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href={% static 'images/favicon.ico' %} type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>{% block title %}
     {% endblock %}</title>
 </head>
 <body>
+    
     <header>
         <a href="{% url 'index' %}" class="logo">LAMER $ <span class="room">ROOM</span></a>
         {% if user.is_authenticated %}
@@ -34,6 +36,5 @@
         {% endblock %}
     </main>
     <script src="{% static 'js/main.js' %}"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </body>
 </html>

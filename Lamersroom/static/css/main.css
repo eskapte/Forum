@@ -343,5 +343,10 @@ a {
     background-color: rgba(0,0,0, 0);
     display: flex;
     justify-content: space-between;
-    width: 40px;
+    width: 60px;
+    padding: 0 30px 0 0;
+  }
+
+  .like-btn .liked img {
+      transform: rotate(180deg);
   }
