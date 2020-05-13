@@ -1,14 +1,3 @@
-// let likeBtn = document.querySelector('.like-btn');
-
-// likeBtn.addEventListener('click', function() {
-    // let likes = +likeBtn.value;
-    // likes += 1;
-    // likeBtn.setAttribute('value', String(likes));
-    // likeBtn.lastChild.textContent = String(likes);
-    // console.log(likes);
-// })
-
-
 $('.like-btn').on('click', function(evt) {
     let likeId = this.id;
     if (!likeId) {
@@ -31,18 +20,19 @@ $('.like-btn').on('click', function(evt) {
             if (response == 'like-removed') {
                 likeValue -= 1;
                 // currentLike.setAttribute('class', 'like-btn');
-            } else {
+            } else if (response == 'like-added') {
                 likeValue += 1;
                 // currentLike.setAttribute('class', 'like-btn liked');
+            } else {
+                alert('Зарегестрируйтесь!');
             }
 
-            currentLike.setAttribute('value', String(likeValue));
-            currentLike.lastChild.textContent = String(likeValue);
+        currentLike.setAttribute('value', String(likeValue));
+        currentLike.lastChild.textContent = String(likeValue);
         },
         error: function(xhr,errmsg,err) {
             console.log(xhr.status + ": " + xhr.responseText);
         }
-
     })
 
 })  

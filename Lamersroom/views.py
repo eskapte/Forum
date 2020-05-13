@@ -9,11 +9,9 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from django.utils import timezone
-from django.http import JsonResponse
-from django.core import serializers
-from django_ajax.mixin import AJAXMixin
 from django.shortcuts import HttpResponse
 
+# 
 def index(request):
     posts = Post.objects.all()
     rubrics = Rubric.objects.all()
@@ -39,17 +37,20 @@ class DetailPost(DetailView, FormView):
     
     def post(self, request, **args):
         self.object = self.get_object()
+        if self.request.user.is_authenticated:
 
-        if self.request.is_ajax():
-            like_id = self.request.POST.get("id")
-            liked_comment = Comment.objects.get(pk=like_id)
-            current_user = self.request.user
-            if current_user in liked_comment.likes.all():
-                liked_comment.likes.remove(current_user.pk)
-                return HttpResponse('like-removed')
-            else:
-                liked_comment.likes.add(current_user.pk)
-                return HttpResponse('like-added')
+            if self.request.is_ajax():
+                like_id = self.request.POST.get("id")
+                liked_comment = Comment.objects.get(pk=like_id)
+                current_user = self.request.user
+                if current_user in liked_comment.likes.all():
+                    liked_comment.likes.remove(current_user.pk)
+                    return HttpResponse('like-removed')
+                else:
+                    liked_comment.likes.add(current_user.pk)
+                    return HttpResponse('like-added')
+        else:
+            return HttpResponse('not-user')
 
         return super().post(request, **args)
 

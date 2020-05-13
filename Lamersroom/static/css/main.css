@@ -350,3 +350,8 @@ a {
   .like-btn .liked img {
       transform: rotate(180deg);
   }
+
+  .main-footer {
+      border-top: 5px solid black;
+      height: 150px;
+  }
