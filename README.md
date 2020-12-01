@@ -8,4 +8,4 @@
 ![alt text](Screenshots/регистрация.jpg "Регистрация")
 ![alt text](Screenshots/комментарии.jpg "Коментарии")
 ![alt text](Screenshots/комментарии2.jpg "Комментарии 2")
-![alt text](Screenshots/создание поста.jpg "Создание поста")
+![alt text](Screenshots/создание_поста.jpg "Создание поста")
